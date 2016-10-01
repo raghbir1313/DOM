@@ -1,0 +1,162 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+
+<body>
+    <p id="para"> This is the paragraph</p>
+    <p id="para2">This is second paragraph</p>
+    <input type="button" id="btn" value="raghbir">
+    <input type="button" id="btn1" value="singh">
+    <script>
+    var para = document.getElementById("para");
+    var para2 = document.getElementById("para2");
+    var button = document.getElementById("btn");
+    var button1 = document.getElementById("btn1");
+     para.style.visibility = "hidden";
+
+    button.addEventListener('click', function() {
+        para.style.visibility = "visible";
+    });
+    para2.style.visibility = "hidden";
+    button.addEventListener('click', function() {
+        para2.style.visibility = "visible";
+    });
+    </script>
+</body>
+
+</html>
+///////..... -->
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Extra Assign. for DOM QUESTION-1</title>
+</head>
+
+<body>
+    <select id="drop">
+        <option value="invisible">Make Invisible</option>
+        <option value="visible">Make visible and color change</option>
+        <option value="color">Change Color</option>
+        <option value="default">Default</option>
+    </select>
+    <p id="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+    <script>
+    var _id = function _id(id) {
+        return document['getElementById'](id);
+    }
+    var para = _id('para');
+    var drop = _id('drop');
+    var events = document['querySelectorAll']('option')
+
+
+    drop['addEventListener']('change', function() {
+        if (drop.value === "invisible") {
+            para['style']['visibility'] = "hidden"
+        } else if (drop.value === "visible") {
+            para['style']['visibility'] = 'visible'
+            para['style']['color'] = "blue"
+        } else if (drop.value === "color") {
+            para['style']['color'] = "red"
+        } else {
+            para['style'] = 'default'
+        }
+
+    });
+    </script>
+</body>
+
+</html>
+ -->
+<!-- <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>dom</title>
+    </head>
+
+    <body>
+       
+        <input type="text" id="textOne" >
+        <input type="text" id="textTwo" >
+        <input type="button" id="button" value="transfer">
+        <script>
+       
+        var _id = function _id(id){
+        	return document['getElementById'](id)
+        }   
+        var one = _id("one");
+       
+        var first = _id("textOne");
+        var second = _id("textTwo");
+       
+        button.addEventListener('click', function() {
+        	first.value == second.value;
+        	
+        	
+        },false);
+        
+        </script>
+    </body>
+
+    </html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ques.4.b</title>
+    <style type="text/css">
+    img {
+        height: 500px;
+        width: 500px;
+    }
+    </style>
+</head>
+
+<body>
+    <input type="button" id="button1" value="PREV">
+    <input type="button" id="button2" value="NEXT">
+    <img src="img/1.jpg" id="img1">
+    <script type="text/javascript">
+    var _id = function _id(id) {
+        return document.getElementById(id);
+    }
+    var Prev = _id("button1");
+    var Next = _id("button2");
+
+    var img1 = _id("img1");
+    var images = ["img/1.jpg", "img/2.jpg", "img/3.jpeg", "img/4.jpg", "img/5.jpeg", "img/6.jpeg", "img/7.jpeg", "img/8.png", "img/9.jpeg", "img/10.jpeg"];
+    var x = 0;
+
+
+
+    Next.addEventListener('click', function() {
+
+        x++;
+        img1.src = images[x];
+
+        if (x == 9) {
+            x = -1;
+        }
+
+    });
+    Prev.addEventListener('click', function() {
+
+        if (x == 0) {
+            x = 10;
+        }
+        x--;
+        img1.src = images[x];
+
+
+    })
+    </script>
+</body>
+
+</html>
